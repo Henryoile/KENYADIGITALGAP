@@ -1,0 +1,575 @@
+:root {
+    --color-primary: #007BFF;
+    /* A vibrant blue */
+    --color-primary-dark: #0056b3;
+    --color-secondary: #28a745;
+    /* A success green */
+    --color-dark: #343a40;
+    --color-light-grey: #f8f9fa;
+    --color-white: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-white);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Typography & Headings --- */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+p.subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+.btn-primary-outline:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary-outline {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+.btn-secondary-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #1e7e34;
+}
+
+.btn-donation {
+    display: block;
+    text-align: center;
+    background-color: #e6236b;
+    /* M-Pesa/Safaricom inspired color */
+    color: var(--color-white);
+    font-size: 1.2rem;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.btn-donation:hover {
+    background-color: #c41e5e;
+}
+
+
+/* --- Header & Navigation --- */
+.hero {
+    background: linear-gradient(120deg, rgba(2, 0, 36, 0.75) 0%, rgba(0, 123, 255, 0.45) 60%), url('kenya-digital-bg.jpg') no-repeat center center/cover;
+    min-height: 72vh;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.hero-wave {
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-top: -4px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.hero-actions .btn {
+    margin: 10px;
+}
+
+
+/* --- Sections & Cards --- */
+.section {
+    padding: 80px 0;
+}
+
+.bg-light-grey {
+    background-color: var(--color-light-grey);
+}
+
+/* Problem Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.counter {
+    display: inline-block;
+    font-variant-numeric: tabular-nums;
+}
+
+.muted {
+    font-size: 0.8rem;
+    margin-left: 6px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.key-pain-points {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.key-pain-points h3 {
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.key-pain-points ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.key-pain-points li {
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    flex: 1 1 45%;
+    /* Allows two items per row on large screens */
+    min-width: 250px;
+}
+
+.key-pain-points li i {
+    margin-right: 10px;
+}
+
+/* Root Cause Section */
+.cause-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.cause-text {
+    flex: 1;
+}
+
+.cause-text h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.cause-text ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.cause-text li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.cause-text li i {
+    color: var(--color-primary);
+    margin-right: 15px;
+}
+
+.cause-image {
+    flex: 1;
+    min-height: 400px;
+    background-color: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-placeholder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ccc;
+    color: var(--color-dark);
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Impact Section */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.impact-card {
+    background: var(--color-white);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--color-secondary);
+    transition: transform 0.3s;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-card i {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.impact-card h3 {
+    margin-bottom: 15px;
+}
+
+/* Call to Action Section */
+.action-section {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Testimonials */
+.testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    font-style: italic;
+}
+
+.testimonial-card .by {
+    margin-top: 12px;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-dark);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    position: relative;
+    width: 95%;
+    max-width: 560px;
+    background: var(--color-white);
+    color: var(--color-dark);
+    padding: 25px;
+    border-radius: 8px;
+    z-index: 1200;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-actions a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Reveal animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.action-form-container h3 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#partner-form input[type="text"],
+#partner-form input[type="email"],
+#partner-form select,
+#partner-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-family);
+}
+
+#partner-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.donation-card {
+    background: var(--color-white);
+    color: var(--color-dark);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.donation-card h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 15px;
+}
+
+.donation-card p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 15px;
+}
+
+.message-text {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 992px) {
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cause-content {
+        flex-direction: column;
+    }
+
+    .cause-text h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Hide navigation on small screens for simplicity */
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .key-pain-points li {
+        flex: 1 1 100%;
+        /* Stack items on small screens */
+    }
+}
