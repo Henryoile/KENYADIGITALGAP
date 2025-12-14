@@ -37,52 +37,7 @@ This README documents how to run the project locally, the project structure, dev
 
 ---
 
-## Quick Start — Local (Development)
-
-The instructions below assume you have Python 3.10+ installed. Adjust the virtual environment commands if you use a different shell.
-
-1. Open PowerShell and change to the project directory:
-
-```powershell
-cd c:\Users\YVONNE\Documents\KenyaDigitalBridge
-```
-
-2. (Optional but recommended) Create and activate a virtual environment:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-3. Install Python dependencies:
-
-```powershell
-pip install -r requirements.txt
-```
-
-4. Initialize the database and run the Flask backend (development mode):
-
-```powershell
-# From the project directory
-python app.py
-```
-
-- The Flask app will create `site.db` automatically and run on `http://127.0.0.1:5000` by default.
-- The frontend is static files; you can either open `index.html` directly in your browser or serve the folder so fetch/XHR works consistently.
-
-5. Serve static files (recommended) to avoid CORS/fetch issues. In a separate PowerShell terminal from the project directory:
-
-```powershell
-# Simple static server for local preview
-python -m http.server 8000
-# Then open http://localhost:8000 in your browser
-```
-
-6. Test the partnership form:
-- Fill out the form on the page and submit. The frontend sends a JSON POST to `/submit_inquiry` (Flask) by default.
-- If Flask is running locally, successful submissions will be saved to `site.db` and you should see a success message in the UI.
-
----
+ 
 
 ## Backend Notes & Security
 
